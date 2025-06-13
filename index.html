@@ -208,6 +208,23 @@
             </div>
         </section>
 
+        <!-- Mural de Recados -->
+        <section id="mural-section" class="mural-section">
+            <h2 class="section-title">
+                <i class="fas fa-comments"></i>
+                Mural de Recados para a Jussara e a Sofia
+                <i class="fas fa-balloons"></i>
+            </h2>
+            <form id="mural-form" class="mural-form">
+                <input type="text" id="nome" name="nome" placeholder="Seu nome" maxlength="30" required />
+                <textarea id="mensagem" name="mensagem" placeholder="Deixe uma mensagem carinhosa..." maxlength="200" required></textarea>
+                <button type="submit" class="mural-btn">
+                    <i class="fas fa-paper-plane"></i> Enviar Recado
+                </button>
+            </form>
+            <div id="mural-mensagens" class="mural-mensagens"></div>
+        </section>
+
         <!-- Footer -->
         <footer class="footer">
             <p>Feito com muito amor para a Sofia e a mamãe Jussara 💕</p>
@@ -263,6 +280,9 @@
         </div>
     </div>
 
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
     <script src="script.js"></script>
+    <script src="mural.js"></script>
 </body>
 </html> 
