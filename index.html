@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chá de Bebê da Sofia 💕</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="title">
+                    <i class="fas fa-baby"></i>
+                    Chá de Bebê da Sofia
+                    <i class="fas fa-heart"></i>
+                </h1>
+                <p class="subtitle">Com muito amor, da mamãe Jussara 💕</p>
+                <div class="decorations">
+                    <span class="star">⭐</span>
+                    <span class="heart">💖</span>
+                    <span class="baby">👶</span>
+                    <span class="heart">💕</span>
+                    <span class="star">⭐</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Products Grid -->
+        <section class="products-section">
+            <h2 class="section-title">
+                <i class="fas fa-gift"></i>
+                Escolha um presente para a Sofia
+                <i class="fas fa-gift"></i>
+            </h2>
+            
+            <div class="products-grid">
+                <!-- Produto 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <i class="fas fa-baby product-icon"></i>
+                    </div>
+                    <h3 class="product-name">Body Bebê</h3>
+                    <p class="product-description">Body fofo para a Sofia</p>
+                    <div class="product-price">R$ 25,00</div>
+                    <button class="buy-btn" onclick="showPix('Body Bebê', 'R$ 25,00')">
+                        <i class="fas fa-shopping-cart"></i>
+                        Comprar
+                    </button>
+                </div>
+
+                <!-- Produto 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <i class="fas fa-tshirt product-icon"></i>
+                    </div>
+                    <h3 class="product-name">Macacãozinho</h3>
+                    <p class="product-description">Macacão confortável</p>
+                    <div class="product-price">R$ 35,00</div>
+                    <button class="buy-btn" onclick="showPix('Macacãozinho', 'R$ 35,00')">
+                        <i class="fas fa-shopping-cart"></i>
+                        Comprar
+                    </button>
+                </div>
+
+                <!-- Produto 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <i class="fas fa-socks product-icon"></i>
+                    </div>
+                    <h3 class="product-name">Meias Fofas</h3>
+                    <p class="product-description">Meirinhas quentinhas</p>
+                    <div class="product-price">R$ 15,00</div>
+                    <button class="buy-btn" onclick="showPix('Meias Fofas', 'R$ 15,00')">
+                        <i class="fas fa-shopping-cart"></i>
+                        Comprar
+                    </button>
+                </div>
+
+                <!-- Produto 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <i class="fas fa-baby-carriage product-icon"></i>
+                    </div>
+                    <h3 class="product-name">Carrinho</h3>
+                    <p class="product-description">Carrinho de passeio</p>
+                    <div class="product-price">R$ 450,00</div>
+                    <button class="buy-btn" onclick="showPix('Carrinho', 'R$ 450,00')">
+                        <i class="fas fa-shopping-cart"></i>
+                        Comprar
+                    </button>
+                </div>
+
+                <!-- Produto 5 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <i class="fas fa-bed product-icon"></i>
+                    </div>
+                    <h3 class="product-name">Berço Portátil</h3>
+                    <p class="product-description">Berço dobrável</p>
+                    <div class="product-price">R$ 280,00</div>
+                    <button class="buy-btn" onclick="showPix('Berço Portátil', 'R$ 280,00')">
+                        <i class="fas fa-shopping-cart"></i>
+                        Comprar
+                    </button>
+                </div>
+
+                <!-- Produto 6 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <i class="fas fa-bath product-icon"></i>
+                    </div>
+                    <h3 class="product-name">Kit Banho</h3>
+                    <p class="product-description">Shampoo, sabonete e toalha</p>
+                    <div class="product-price">R$ 45,00</div>
+                    <button class="buy-btn" onclick="showPix('Kit Banho', 'R$ 45,00')">
+                        <i class="fas fa-shopping-cart"></i>
+                        Comprar
+                    </button>
+                </div>
+
+                <!-- Produto 7 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <i class="fas fa-bottle-baby product-icon"></i>
+                    </div>
+                    <h3 class="product-name">Mamadeiras</h3>
+                    <p class="product-description">Kit com 3 mamadeiras</p>
+                    <div class="product-price">R$ 60,00</div>
+                    <button class="buy-btn" onclick="showPix('Mamadeiras', 'R$ 60,00')">
+                        <i class="fas fa-shopping-cart"></i>
+                        Comprar
+                    </button>
+                </div>
+
+                <!-- Produto 8 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <i class="fas fa-teddy-bear product-icon"></i>
+                    </div>
+                    <h3 class="product-name">Ursinho de Pelúcia</h3>
+                    <p class="product-description">Ursinho fofo para Sofia</p>
+                    <div class="product-price">R$ 40,00</div>
+                    <button class="buy-btn" onclick="showPix('Ursinho de Pelúcia', 'R$ 40,00')">
+                        <i class="fas fa-shopping-cart"></i>
+                        Comprar
+                    </button>
+                </div>
+
+                <!-- Produto 9 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <i class="fas fa-diaper product-icon"></i>
+                    </div>
+                    <h3 class="product-name">Fraldas</h3>
+                    <p class="product-description">Pacote de fraldas RN</p>
+                    <div class="product-price">R$ 55,00</div>
+                    <button class="buy-btn" onclick="showPix('Fraldas', 'R$ 55,00')">
+                        <i class="fas fa-shopping-cart"></i>
+                        Comprar
+                    </button>
+                </div>
+
+                <!-- Produto 10 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <i class="fas fa-blanket product-icon"></i>
+                    </div>
+                    <h3 class="product-name">Mantinha</h3>
+                    <p class="product-description">Mantinha quentinha</p>
+                    <div class="product-price">R$ 35,00</div>
+                    <button class="buy-btn" onclick="showPix('Mantinha', 'R$ 35,00')">
+                        <i class="fas fa-shopping-cart"></i>
+                        Comprar
+                    </button>
+                </div>
+
+                <!-- Produto 11 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <i class="fas fa-music product-icon"></i>
+                    </div>
+                    <h3 class="product-name">Mobile Musical</h3>
+                    <p class="product-description">Mobile com músicas</p>
+                    <div class="product-price">R$ 85,00</div>
+                    <button class="buy-btn" onclick="showPix('Mobile Musical', 'R$ 85,00')">
+                        <i class="fas fa-shopping-cart"></i>
+                        Comprar
+                    </button>
+                </div>
+
+                <!-- Produto 12 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <i class="fas fa-heart product-icon"></i>
+                    </div>
+                    <h3 class="product-name">Kit Enxoval</h3>
+                    <p class="product-description">Kit completo de enxoval</p>
+                    <div class="product-price">R$ 150,00</div>
+                    <button class="buy-btn" onclick="showPix('Kit Enxoval', 'R$ 150,00')">
+                        <i class="fas fa-shopping-cart"></i>
+                        Comprar
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Feito com muito amor para a Sofia e a mamãe Jussara 💕</p>
+            <div class="decorations">
+                <span class="star">⭐</span>
+                <span class="heart">💖</span>
+                <span class="baby">👶</span>
+                <span class="heart">💕</span>
+                <span class="star">⭐</span>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Modal do PIX -->
+    <div id="pixModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-header">
+                <h2><i class="fas fa-gift"></i> Presente Selecionado</h2>
+            </div>
+            <div class="modal-body">
+                <div class="selected-product">
+                    <h3 id="selectedProduct">Produto</h3>
+                    <p id="selectedPrice">Preço</p>
+                </div>
+                
+                <div class="pix-info">
+                    <h3><i class="fas fa-qrcode"></i> PIX da Jussara</h3>
+                    <div class="pix-key">
+                        <p><strong>Chave PIX:</strong></p>
+                        <div class="pix-number">45998183810</div>
+                        <button class="copy-btn" onclick="copyPix()">
+                            <i class="fas fa-copy"></i>
+                            Copiar PIX
+                        </button>
+                    </div>
+                </div>
+
+                <div class="instructions">
+                    <h4><i class="fas fa-heart"></i> Como presentear:</h4>
+                    <ol>
+                        <li>Copie a chave PIX acima</li>
+                        <li>Abra seu aplicativo do banco</li>
+                        <li>Faça a transferência PIX</li>
+                        <li>Envie o comprovante para a Jussara</li>
+                    </ol>
+                </div>
+
+                <div class="thank-you">
+                    <p><i class="fas fa-heart"></i> Obrigada por presentear a Sofia! <i class="fas fa-heart"></i></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
