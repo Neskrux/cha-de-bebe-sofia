@@ -512,125 +512,248 @@ body {
 /* Mural de Recados */
 .mural-section {
     margin: 50px auto 40px auto;
-    max-width: 700px;
-    background: linear-gradient(135deg, #fff5f5 0%, #f0f8ff 100%);
-    border-radius: 25px;
-    box-shadow: 0 8px 25px rgba(255, 182, 193, 0.12);
-    padding: 35px 25px 30px 25px;
+    max-width: 800px;
+    background: linear-gradient(135deg, #ffb6c1 0%, #e6e6fa 50%, #f0f8ff 100%);
+    border-radius: 30px;
+    box-shadow: 0 15px 40px rgba(255, 182, 193, 0.25);
+    padding: 40px 30px;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.mural-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+    animation: sparkle 15s linear infinite;
+    pointer-events: none;
+}
+
+.mural-section .section-title {
+    position: relative;
+    z-index: 2;
+    color: #ff69b4;
+    text-shadow: 2px 2px 4px rgba(255, 182, 193, 0.3);
+    margin-bottom: 35px;
 }
 
 .mural-form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    margin-bottom: 30px;
+    gap: 20px;
+    margin-bottom: 40px;
     align-items: center;
+    position: relative;
+    z-index: 2;
 }
 
 .mural-form input[type="text"],
 .mural-form textarea {
     width: 100%;
-    max-width: 400px;
-    padding: 12px 15px;
-    border-radius: 15px;
-    border: 2px solid #ffb6c1;
-    font-size: 1em;
+    max-width: 450px;
+    padding: 15px 20px;
+    border-radius: 20px;
+    border: 3px solid rgba(255, 182, 193, 0.6);
+    font-size: 1.1em;
     font-family: 'Poppins', sans-serif;
-    background: #fff;
+    background: linear-gradient(135deg, #ffffff 0%, #fef9ff 100%);
     color: #8a2be2;
     resize: none;
-    box-shadow: 0 2px 8px rgba(255, 182, 193, 0.08);
-    transition: border 0.2s;
+    box-shadow: 0 8px 25px rgba(255, 182, 193, 0.15);
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.mural-form input[type="text"]::placeholder,
+.mural-form textarea::placeholder {
+    color: #dda0dd;
+    font-weight: 400;
 }
 
 .mural-form input[type="text"]:focus,
 .mural-form textarea:focus {
-    border: 2px solid #ff69b4;
+    border: 3px solid #ff69b4;
     outline: none;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px rgba(255, 182, 193, 0.25);
 }
 
 .mural-btn {
     background: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%);
     color: white;
     border: none;
-    padding: 10px 30px;
-    border-radius: 20px;
-    font-size: 1em;
+    padding: 15px 35px;
+    border-radius: 25px;
+    font-size: 1.1em;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(255, 20, 147, 0.18);
-    margin-top: 5px;
+    box-shadow: 0 8px 25px rgba(255, 20, 147, 0.3);
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .mural-btn:hover {
     background: linear-gradient(135deg, #ff1493 0%, #dc143c 100%);
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(255, 20, 147, 0.4);
 }
 
 .mural-btn i {
-    margin-right: 7px;
+    margin-right: 8px;
 }
 
 .mural-mensagens {
-    margin-top: 10px;
+    margin-top: 20px;
     text-align: left;
-    max-height: 350px;
+    max-height: 400px;
     overflow-y: auto;
-    padding-right: 5px;
+    padding: 0 10px;
+    position: relative;
+    z-index: 2;
 }
 
 .mural-msg {
-    background: linear-gradient(135deg, #f0f8ff 0%, #ffeef8 100%);
-    border-radius: 15px;
-    border: 2px solid #e6e6fa;
-    box-shadow: 0 2px 8px rgba(255, 182, 193, 0.08);
-    margin-bottom: 18px;
-    padding: 18px 20px 12px 20px;
+    background: linear-gradient(135deg, #ffffff 0%, #fef9ff 100%);
+    border-radius: 20px;
+    border: 2px solid transparent;
+    box-shadow: 0 8px 25px rgba(255, 182, 193, 0.15);
+    margin-bottom: 20px;
+    padding: 25px;
     position: relative;
-    animation: muralFadeIn 0.7s;
+    animation: muralFadeIn 0.8s ease;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.mural-msg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 182, 193, 0.1) 0%, rgba(230, 230, 250, 0.1) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.mural-msg:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(255, 182, 193, 0.25);
+    border-color: #ffb6c1;
+}
+
+.mural-msg:hover::before {
+    opacity: 1;
 }
 
 @keyframes muralFadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from { opacity: 0; transform: translateY(30px) scale(0.95); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
 .mural-msg-nome {
     color: #ff69b4;
     font-weight: 700;
-    font-size: 1.1em;
-    margin-bottom: 6px;
+    font-size: 1.3em;
+    margin-bottom: 10px;
     display: flex;
     align-items: center;
-    gap: 7px;
+    gap: 10px;
+    text-shadow: 1px 1px 3px rgba(255, 182, 193, 0.3);
+    position: relative;
+    z-index: 2;
 }
 
 .mural-msg-nome i {
     color: #ffa0ac;
+    background: linear-gradient(135deg, #ffb6c1 0%, #e6e6fa 100%);
+    padding: 8px;
+    border-radius: 50%;
+    box-shadow: 0 3px 10px rgba(255, 182, 193, 0.3);
 }
 
 .mural-msg-texto {
     color: #8a2be2;
-    font-size: 1em;
-    margin-bottom: 2px;
+    font-size: 1.05em;
+    line-height: 1.6;
+    margin-bottom: 15px;
     word-break: break-word;
+    font-weight: 500;
+    position: relative;
+    z-index: 2;
 }
 
 .mural-msg-data {
-    color: #bdbdbd;
-    font-size: 0.85em;
+    color: #dda0dd;
+    font-size: 0.9em;
     text-align: right;
-    margin-top: 5px;
+    margin-top: 10px;
+    font-weight: 500;
+    position: relative;
+    z-index: 2;
+}
+
+.mural-mensagens::-webkit-scrollbar {
+    width: 8px;
+}
+
+.mural-mensagens::-webkit-scrollbar-track {
+    background: rgba(255, 182, 193, 0.1);
+    border-radius: 10px;
+}
+
+.mural-mensagens::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #ffb6c1 0%, #e6e6fa 100%);
+    border-radius: 10px;
+}
+
+.mural-mensagens::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #ff69b4 0%, #dda0dd 100%);
 }
 
 @media (max-width: 768px) {
     .mural-section {
-        padding: 20px 8px 18px 8px;
+        padding: 30px 20px;
+        margin: 40px 15px;
     }
+    
     .mural-form input[type="text"],
     .mural-form textarea {
-        max-width: 98vw;
+        max-width: 100%;
+        padding: 12px 15px;
+        font-size: 1em;
+    }
+    
+    .mural-btn {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+    
+    .mural-msg {
+        padding: 20px;
+    }
+    
+    .mural-msg-nome {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .mural-section {
+        padding: 25px 15px;
+    }
+    
+    .mural-msg-nome i {
+        padding: 6px;
     }
 } 
